@@ -3,7 +3,7 @@ MAINTAINER Randall Smith <perlstalker@gmail.com>
 
 RUN apt-get update
 
-RUN apt-get install -y git ruby ruby-dev gems rbenv ruby-redcloth build-essential python-pygments
+RUN apt-get install -y git ruby ruby-dev gems rbenv ruby-redcloth build-essential python-pygments nodejs
 
 WORKDIR /usr/local/src
 RUN git clone https://github.com/PerlStalker/perlstalker.vuser.org.git perlstalker.vuser.org
