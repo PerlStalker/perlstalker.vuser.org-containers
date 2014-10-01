@@ -4,7 +4,7 @@ MAINTAINER Randall Smith <perlstalker@gmail.com>
 RUN apt-get update
 
 RUN apt-get install -y perl cpanminus build-essential
-RUN apt-get install mercurial
+RUN apt-get install -y mercurial
 
 WORKDIR /usr/local/src/
 RUN hg clone https://code.google.com/p/comics-fetcher/
