@@ -9,6 +9,7 @@ RUN apt-get install -y mercurial
 WORKDIR /usr/local/src/
 RUN hg clone https://code.google.com/p/comics-fetcher/
 WORKDIR /usr/local/src/comics-fetcher/
+
 RUN perl ./Build.PL
 RUN ./Build installdeps
 RUN ./Build install
