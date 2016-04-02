@@ -3,11 +3,10 @@ MAINTAINER Randall Smith <perlstalker@gmail.com>
 
 RUN apt-get update
 
-RUN apt-get install -y perl cpanminus build-essential
-RUN apt-get install -y mercurial
+RUN apt-get install -y perl cpanminus build-essential git libssl-dev && apt-get clean
 
 WORKDIR /usr/local/src/
-RUN hg clone https://code.google.com/p/comics-fetcher/
+RUN git clone https://github.com/PerlStalker/comics-fetcher.git
 WORKDIR /usr/local/src/comics-fetcher/
 
 RUN perl ./Build.PL
