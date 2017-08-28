@@ -1,15 +1,4 @@
-#FROM ubuntu:trusty
-#MAINTAINER Randall Smith <perlstalker@gmail.com>
-#FROM debian:9
 FROM perl:5.26
-
-# RUN apt-get update && apt-get install -y \
-#     build-essential \
-#     cpanminus \
-#     git \
-#     libssl-dev \
-#     perl \
-#   && apt-get clean
 
 RUN cpanm \
  Module::Build
